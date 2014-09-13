@@ -1,6 +1,6 @@
 # raft
 
-*Or "**R**equest **A**nimation **F**rame **T**hrottle".*
+*Or "Request Animation Frame Throttle".*
 
 Throttle a function to be executed at most once per animation frame.
 
@@ -29,13 +29,13 @@ function updateSomething(event) {
 
 ### raft(fn)
 
-Wraps a function in a wrapper that will call it at most once per animation frame.
+Returns a wrapper that will call `fn` at most once per animation frame.
 
-Function, when called, will receive last context (`this`) and arguments passed to the wrapper before animation frame kicked in.
+Function will be executed once in next animation frame, and will receive last context (`this`) and arguments passed to the wrapper.
 
 - **fn** `Function` Function to wrap.
 
-*Returns* `Function` Wrapped `fn`.
+*Returns* `Function`
 
 Example:
 
